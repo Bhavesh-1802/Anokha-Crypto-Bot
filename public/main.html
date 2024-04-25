@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anokha Crypto Bot</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .green-box {
+            background-color: green;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .button-green {
+            background-color: green;
+            color: white;
+        }
+        .button-red {
+            background-color: red;
+            color: white;
+        }
+        .strategy-box {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .position-box {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Anokha Crypto bot</h1>
+    <div class="green-box">
+        Available USDT balance: {{ .AvailableBalance }}
+    </div>
+    <div class="strategy-box">
+        <h2>Long Strategy</h2>
+        <p>Aim to identify trading opportunities where the market is potentially oversold (based on RSI), the price is at or near a potential support level (based on the lower Bollinger Band), and there is a bullish trend (based on the EMA). This combination of signals may suggest a favorable moment to enter a long position in the market.</p>
+        <div class="button-container">
+            <button class="button button-green" onclick="openLong()">Long BTC</button>
+        </div>
+    </div>
+    <div class="strategy-box">
+        <h2>Short Strategy</h2>
+        <p>Aim to identify trading opportunities where the market is likely overbought (as indicated by RSI), the price is trending upwards (EMA), and the price has extended beyond its typical range (upper Bollinger Band), indicating a possible reversal or correction. This combination of signals may suggest a favorable moment to enter a Short position in the market.</p>
+        <div class="button-container">
+            <button class="button button-red" onclick="openShort()">Short BTC</button>
+        </div>
+    </div>
+    <div class="position-box">
+        <h2>Active Positions</h2>
+        <div class="button-container">
+            <button class="button button-green" onclick="checkPositions()">Check Positions</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openLong() {
+        window.open('/long', '_blank');
+    }
+
+    function openShort() {
+        window.open('/short', '_blank');
+    }
+
+    function checkPositions() {
+        window.open('/position', '_blank');
+    }
+</script>
+</body>
+</html>

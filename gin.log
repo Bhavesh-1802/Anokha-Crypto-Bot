@@ -1,0 +1,17 @@
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /public/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] HEAD   /public/*filepath         --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (1 handlers)
+[GIN-debug] GET    /info                     --> Anokha-main/internal/adapters/httpAdapter.ShowGetFuturesAccountInfo (1 handlers)
+[GIN-debug] POST   /info                     --> Anokha-main/internal/adapters/httpAdapter.GetFuturesAccountInfo (1 handlers)
+[GIN-debug] GET    /long                     --> Anokha-main/internal/adapters/httpAdapter.ShowTradePageL (1 handlers)
+[GIN-debug] GET    /longtradews              --> Anokha-main/internal/adapters/httpAdapter.StartTradeWebSocketL (1 handlers)
+[GIN-debug] GET    /short                    --> Anokha-main/internal/adapters/httpAdapter.ShowTradePageS (1 handlers)
+[GIN-debug] GET    /shorttradews             --> Anokha-main/internal/adapters/httpAdapter.StartTradeWebSocketS (1 handlers)
+[GIN-debug] GET    /position                 --> Anokha-main/internal/adapters/httpAdapter.ShowPositionPage (1 handlers)
+[GIN-debug] GET    /positionws               --> Anokha-main/internal/adapters/httpAdapter.StartPositionWebSocket (1 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8082
